@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexaTech | Intelligent Software & AI Solutions</title>
+  <meta name="description" content="NexaTech engineers intelligent software, AI-powered applications, cloud platforms, and cybersecurity solutions that help businesses scale faster.">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden">
+
+  <!-- Background Glow & Grid Accents -->
+  <div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+    <!-- Top-center primary cyan glow -->
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[650px] sm:w-[900px] h-[450px] bg-gradient-to-tr from-cyan-600/20 via-indigo-600/15 to-transparent blur-[120px] rounded-full"></div>
+    <!-- Mid-page subtle indigo glow -->
+    <div class="absolute top-[35%] -left-32 w-[500px] h-[500px] bg-indigo-700/10 blur-[130px] rounded-full"></div>
+    <!-- Bottom cyan glow -->
+    <div class="absolute bottom-10 -right-32 w-[550px] h-[550px] bg-cyan-600/10 blur-[140px] rounded-full"></div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center gap-2.5 group">
+        <span class="text-2xl text-cyan-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.7)] group-hover:scale-110 transition-transform">⚡</span>
+        <span class="text-xl sm:text-2xl font-black tracking-tight text-white group-hover:text-cyan-400 transition-colors">
+          Nexa<span class="text-cyan-400">Tech</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#home" class="hover:text-cyan-400 transition-colors">Home</a>
+        <a href="#services" class="hover:text-cyan-400 transition-colors">Services</a>
+        <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+        <a href="#technologies" class="hover:text-cyan-400 transition-colors">Technologies</a>
+        <a href="#testimonials" class="hover:text-cyan-400 transition-colors">Testimonials</a>
+        <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Desktop Action Button -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white text-sm font-semibold shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all duration-200">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Menu (Pure HTML5 & Tailwind, No JavaScript) -->
+      <details class="md:hidden group relative">
+        <summary class="list-none cursor-pointer p-2 rounded-xl border border-slate-800 bg-slate-900/80 text-slate-300 hover:text-white hover:border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all [&::-webkit-details-marker]:hidden flex items-center justify-center">
+          <!-- Hamburger Icon (visible when closed) -->
+          <svg class="w-6 h-6 block group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+          </svg>
+          <!-- Close Icon (visible when opened) -->
+          <svg class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </summary>
+        
+        <!-- Mobile Dropdown Panel -->
+        <div class="absolute right-0 top-full mt-3 w-64 rounded-2xl bg-slate-900/95 border border-slate-800 p-5 shadow-2xl shadow-cyan-950/50 backdrop-blur-2xl flex flex-col space-y-3 z-50">
+          <a href="#home" class="px-3 py-2 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 text-sm font-medium transition-all">Home</a>
+          <a href="#services" class="px-3 py-2 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 text-sm font-medium transition-all">Services</a>
+          <a href="#about" class="px-3 py-2 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 text-sm font-medium transition-all">About</a>
+          <a href="#technologies" class="px-3 py-2 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 text-sm font-medium transition-all">Technologies</a>
+          <a href="#testimonials" class="px-3 py-2 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 text-sm font-medium transition-all">Testimonials</a>
+          <a href="#contact" class="px-3 py-2 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 text-sm font-medium transition-all">Contact</a>
+          <div class="pt-3 border-t border-slate-800">
+            <a href="#contact" class="block w-full text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 text-white text-sm font-semibold shadow-lg shadow-cyan-500/20 hover:opacity-95 transition-all">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative pt-16 pb-20 sm:pt-24 sm:pb-28 lg:pt-32 lg:pb-36 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Text Column -->
+        <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+          
+          <!-- Futuristic Pill Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-cyan-400 text-xs sm:text-sm font-medium backdrop-blur-md shadow-[0_0_15px_rgba(6,182,212,0.15)]">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            Next-Gen Autonomous Intelligence
+          </div>
+
+          <!-- Main Hero Heading -->
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-tight">
+            Build the Future with <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent">Intelligent Software</span>
+          </h1>
+
+          <!-- Hero Subtext -->
+          <p class="text-base sm:text-xl text-slate-300 font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            We design AI-powered apps, cloud platforms and cybersecurity solutions that help businesses grow faster.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <!-- Solid Neon Button -->
+            <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-semibold text-base shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all duration-200">
+              Start a Project
+            </a>
+            
+            <!-- Outlined Glass Button -->
+            <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl border border-slate-700/80 hover:border-cyan-400/60 bg-slate-900/50 hover:bg-slate-800/80 text-slate-200 hover:text-white font-semibold text-base backdrop-blur-md hover:-translate-y-0.5 transition-all duration-200">
+              View Services
+            </a>
+          </div>
+
+          <!-- Social Proof Line -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 text-slate-400 text-sm">
+            <div class="flex items-center gap-1 text-amber-400">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="font-medium text-slate-300">Trusted by 500+ companies worldwide</span>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual Column (Real Unsplash Server / Tech Photo with Neon Frame) -->
+        <div class="lg:col-span-5 relative">
+          <!-- Ambient glowing background effect -->
+          <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 to-indigo-600 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+          
+          <div class="relative rounded-2xl border border-slate-800 bg-slate-900/90 overflow-hidden shadow-2xl shadow-cyan-950/40">
+            <!-- Terminal / Code Editor Header -->
+            <div class="px-4 py-3 border-b border-slate-800 bg-slate-950/60 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+              </div>
+              <span class="text-xs font-mono text-slate-400">nexatech-neural-cluster.tsx</span>
+              <span class="text-xs text-cyan-400 font-mono">v4.1.0</span>
+            </div>
+
+            <!-- Real Unsplash Tech Image -->
+            <div class="relative group">
+              <img 
+                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" 
+                alt="NexaTech enterprise data center servers with glowing blue and cyan LED fiber optic arrays" 
+                class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
+              
+              <!-- Floating Live Metric Badge 1 -->
+              <div class="absolute top-4 right-4 rounded-xl border border-cyan-500/30 bg-slate-900/90 backdrop-blur-md px-3.5 py-2 shadow-lg flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span class="text-xs font-semibold text-slate-200">AI Core: <strong class="text-cyan-400">Online</strong></span>
+              </div>
+
+              <!-- Floating Live Metric Badge 2 -->
+              <div class="absolute bottom-4 left-4 right-4 rounded-xl border border-slate-800 bg-slate-950/90 backdrop-blur-md p-3.5 shadow-xl flex items-center justify-between">
+                <div>
+                  <div class="text-xs text-slate-400 font-mono">NEURAL THROUGHPUT</div>
+                  <div class="text-sm font-bold text-white flex items-center gap-1.5 mt-0.5">
+                    <span>⚡ 4.8 TB/s</span>
+                    <span class="text-xs text-emerald-400 font-normal">(+99.4%)</span>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div class="text-xs text-slate-400 font-mono">LATENCY</div>
+                  <div class="text-sm font-bold text-cyan-400 font-mono mt-0.5">0.82 ms</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="relative py-12 sm:py-16 border-y border-slate-800/80 bg-slate-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        
+        <!-- Stat Item 1 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/50 p-6 sm:p-8 backdrop-blur-sm text-center hover:border-cyan-500/40 hover:bg-slate-900/80 transition-all duration-300 hover:-translate-y-1 group">
+          <div class="text-3xl sm:text-5xl font-black bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
+            500+
+          </div>
+          <div class="text-sm sm:text-base font-semibold text-slate-300 mt-2">Projects Delivered</div>
+          <div class="text-xs text-slate-500 mt-1">Global enterprise solutions</div>
+        </div>
+
+        <!-- Stat Item 2 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/50 p-6 sm:p-8 backdrop-blur-sm text-center hover:border-cyan-500/40 hover:bg-slate-900/80 transition-all duration-300 hover:-translate-y-1 group">
+          <div class="text-3xl sm:text-5xl font-black bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
+            99.9%
+          </div>
+          <div class="text-sm sm:text-base font-semibold text-slate-300 mt-2">Uptime</div>
+          <div class="text-xs text-slate-500 mt-1">Guaranteed SLA standard</div>
+        </div>
+
+        <!-- Stat Item 3 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/50 p-6 sm:p-8 backdrop-blur-sm text-center hover:border-cyan-500/40 hover:bg-slate-900/80 transition-all duration-300 hover:-translate-y-1 group">
+          <div class="text-3xl sm:text-5xl font-black bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
+            50+
+          </div>
+          <div class="text-sm sm:text-base font-semibold text-slate-300 mt-2">Engineers</div>
+          <div class="text-xs text-slate-500 mt-1">AI & systems specialists</div>
+        </div>
+
+        <!-- Stat Item 4 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/50 p-6 sm:p-8 backdrop-blur-sm text-center hover:border-cyan-500/40 hover:bg-slate-900/80 transition-all duration-300 hover:-translate-y-1 group">
+          <div class="text-3xl sm:text-5xl font-black bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
+            24/7
+          </div>
+          <div class="text-sm sm:text-base font-semibold text-slate-300 mt-2">Support</div>
+          <div class="text-xs text-slate-500 mt-1">Dedicated operations desk</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 sm:py-28 lg:py-32 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-cyan-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+          Our Core Capabilities
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mt-4">
+          Software & AI Solutions Built to Scale
+        </h2>
+        <p class="text-base sm:text-lg text-slate-400 mt-4 leading-relaxed">
+          From algorithmic intelligence to fault-tolerant architectures, we engineer platforms that give tech-forward companies an unfair advantage.
+        </p>
+      </div>
+
+      <!-- Services Grid (6 Cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        
+        <!-- Service Card 1 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-8 backdrop-blur-sm hover:border-cyan-500/50 hover:bg-slate-900/80 hover:shadow-[0_0_30px_rgba(6,182,212,0.12)] transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-slate-800/70 border border-slate-700/60 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-cyan-950/40 group-hover:border-cyan-500/40 transition-all duration-300 shadow-inner">
+              🤖
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              AI & Machine Learning
+            </h3>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed mt-3">
+              Deploy custom generative AI models, deep learning pipelines, and predictive algorithms tailored to your enterprise.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800/60 flex items-center text-xs font-semibold text-cyan-400 group-hover:translate-x-1 transition-transform">
+            <span>Explore neural architecture</span>
+            <span class="ml-1.5">→</span>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-8 backdrop-blur-sm hover:border-cyan-500/50 hover:bg-slate-900/80 hover:shadow-[0_0_30px_rgba(6,182,212,0.12)] transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-slate-800/70 border border-slate-700/60 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-cyan-950/40 group-hover:border-cyan-500/40 transition-all duration-300 shadow-inner">
+              ☁️
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              Cloud Infrastructure
+            </h3>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed mt-3">
+              Architect scalable, auto-healing AWS and multi-cloud environments built for zero downtime and hyper-scale.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800/60 flex items-center text-xs font-semibold text-cyan-400 group-hover:translate-x-1 transition-transform">
+            <span>Explore cloud clusters</span>
+            <span class="ml-1.5">→</span>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-8 backdrop-blur-sm hover:border-cyan-500/50 hover:bg-slate-900/80 hover:shadow-[0_0_30px_rgba(6,182,212,0.12)] transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-slate-800/70 border border-slate-700/60 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-cyan-950/40 group-hover:border-cyan-500/40 transition-all duration-300 shadow-inner">
+              🔒
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              Cybersecurity
+            </h3>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed mt-3">
+              Fortify digital assets with automated zero-trust protocols, end-to-end encryption, and real-time threat detection.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800/60 flex items-center text-xs font-semibold text-cyan-400 group-hover:translate-x-1 transition-transform">
+            <span>Explore security shields</span>
+            <span class="ml-1.5">→</span>
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-8 backdrop-blur-sm hover:border-cyan-500/50 hover:bg-slate-900/80 hover:shadow-[0_0_30px_rgba(6,182,212,0.12)] transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-slate-800/70 border border-slate-700/60 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-cyan-950/40 group-hover:border-cyan-500/40 transition-all duration-300 shadow-inner">
+              📱
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              Mobile App Development
+            </h3>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed mt-3">
+              Craft high-performance, fluid iOS and Android mobile experiences loved by millions of active users.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800/60 flex items-center text-xs font-semibold text-cyan-400 group-hover:translate-x-1 transition-transform">
+            <span>Explore native apps</span>
+            <span class="ml-1.5">→</span>
+          </div>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-8 backdrop-blur-sm hover:border-cyan-500/50 hover:bg-slate-900/80 hover:shadow-[0_0_30px_rgba(6,182,212,0.12)] transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-slate-800/70 border border-slate-700/60 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-cyan-950/40 group-hover:border-cyan-500/40 transition-all duration-300 shadow-inner">
+              🌐
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              Web Development
+            </h3>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed mt-3">
+              Engineer blazing-fast, modern web applications with component architectures and seamless API integrations.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800/60 flex items-center text-xs font-semibold text-cyan-400 group-hover:translate-x-1 transition-transform">
+            <span>Explore web platforms</span>
+            <span class="ml-1.5">→</span>
+          </div>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-8 backdrop-blur-sm hover:border-cyan-500/50 hover:bg-slate-900/80 hover:shadow-[0_0_30px_rgba(6,182,212,0.12)] transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-slate-800/70 border border-slate-700/60 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-cyan-950/40 group-hover:border-cyan-500/40 transition-all duration-300 shadow-inner">
+              📊
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              Data Analytics
+            </h3>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed mt-3">
+              Transform petabytes of raw data into real-time visual dashboards and actionable strategic business intelligence.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800/60 flex items-center text-xs font-semibold text-cyan-400 group-hover:translate-x-1 transition-transform">
+            <span>Explore analytics engines</span>
+            <span class="ml-1.5">→</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 sm:py-28 lg:py-32 relative border-t border-slate-800/80 bg-slate-900/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- About Image Column (Real Unsplash Circuit/Processor Photo) -->
+        <div class="lg:col-span-6 relative order-2 lg:order-1">
+          <!-- Ambient glowing background -->
+          <div class="absolute -inset-1 bg-gradient-to-tr from-cyan-500/30 to-indigo-600/30 rounded-3xl blur-xl"></div>
+          
+          <div class="relative rounded-2xl border border-slate-800 bg-slate-900 overflow-hidden shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" 
+              alt="Futuristic glowing microchip semiconductor circuits and hardware motherboard" 
+              class="w-full h-80 sm:h-[450px] object-cover object-center hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <!-- Float Stat Badge -->
+            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-900/90 border border-slate-800 backdrop-blur-md flex items-center justify-between">
+              <div>
+                <div class="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Benchmark Standard</div>
+                <div class="text-sm font-bold text-white mt-0.5">ISO 27001 & SOC2 Certified</div>
+              </div>
+              <div class="text-2xl">🛡️</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Text Column -->
+        <div class="lg:col-span-6 space-y-6 order-1 lg:order-2">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-cyan-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+            Who We Are
+          </div>
+
+          <!-- Section Heading -->
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Engineering Excellence, Delivered
+          </h2>
+
+          <!-- Descriptive Text -->
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+            At NexaTech, we partner with industry pioneers and venture-backed scaleups to design, architect, and ship high-impact digital systems. We combine rigorous computer science fundamentals with rapid modern execution.
+          </p>
+
+          <!-- 3 Feature Bullet Points -->
+          <div class="space-y-5 pt-3">
+            
+            <!-- Bullet 1 -->
+            <div class="flex items-start gap-4 p-4 rounded-2xl border border-slate-800/60 bg-slate-900/40 hover:border-slate-700 hover:bg-slate-900/70 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 flex items-center justify-center shrink-0 text-lg">
+                👨‍💻
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Expert engineers</h4>
+                <p class="text-sm text-slate-400 mt-1 leading-relaxed">
+                  Top-tier developers, AI researchers, and distributed cloud architects obsessed with writing clean, maintainable, and fault-tolerant code.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bullet 2 -->
+            <div class="flex items-start gap-4 p-4 rounded-2xl border border-slate-800/60 bg-slate-900/40 hover:border-slate-700 hover:bg-slate-900/70 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-indigo-950/50 border border-indigo-500/30 text-indigo-400 flex items-center justify-center shrink-0 text-lg">
+                ⚡
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Agile development</h4>
+                <p class="text-sm text-slate-400 mt-1 leading-relaxed">
+                  Two-week iterative sprints, transparent CI/CD automation pipelines, and continuous customer feedback loops that guarantee zero surprises.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bullet 3 -->
+            <div class="flex items-start gap-4 p-4 rounded-2xl border border-slate-800/60 bg-slate-900/40 hover:border-slate-700 hover:bg-slate-900/70 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-teal-950/50 border border-teal-500/30 text-teal-400 flex items-center justify-center shrink-0 text-lg">
+                🛡️
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Secure by design</h4>
+                <p class="text-sm text-slate-400 mt-1 leading-relaxed">
+                  Enterprise-grade zero-trust authentication, robust data encryption in flight and at rest, and automated vulnerability scans.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section id="technologies" class="py-20 sm:py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-cyan-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+          Technology Stack
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-4">
+          Battle-Tested Frameworks & Tools
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          We build with the world's most resilient languages, cloud platforms, and machine learning toolkits.
+        </p>
+      </div>
+
+      <!-- Badges Grid -->
+      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-5 max-w-4xl mx-auto">
+        
+        <!-- Python -->
+        <div class="px-6 py-3.5 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm hover:border-cyan-400/60 hover:bg-slate-800/80 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3 text-slate-200 font-semibold text-base cursor-default">
+          <span class="text-xl">🐍</span>
+          <span>Python</span>
+        </div>
+
+        <!-- React -->
+        <div class="px-6 py-3.5 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm hover:border-cyan-400/60 hover:bg-slate-800/80 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3 text-slate-200 font-semibold text-base cursor-default">
+          <span class="text-xl">⚛️</span>
+          <span>React</span>
+        </div>
+
+        <!-- Node.js -->
+        <div class="px-6 py-3.5 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm hover:border-cyan-400/60 hover:bg-slate-800/80 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3 text-slate-200 font-semibold text-base cursor-default">
+          <span class="text-xl">🟢</span>
+          <span>Node.js</span>
+        </div>
+
+        <!-- AWS -->
+        <div class="px-6 py-3.5 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm hover:border-cyan-400/60 hover:bg-slate-800/80 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3 text-slate-200 font-semibold text-base cursor-default">
+          <span class="text-xl">☁️</span>
+          <span>AWS</span>
+        </div>
+
+        <!-- Docker -->
+        <div class="px-6 py-3.5 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm hover:border-cyan-400/60 hover:bg-slate-800/80 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3 text-slate-200 font-semibold text-base cursor-default">
+          <span class="text-xl">🐳</span>
+          <span>Docker</span>
+        </div>
+
+        <!-- TensorFlow -->
+        <div class="px-6 py-3.5 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm hover:border-cyan-400/60 hover:bg-slate-800/80 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3 text-slate-200 font-semibold text-base cursor-default">
+          <span class="text-xl">🧠</span>
+          <span>TensorFlow</span>
+        </div>
+
+        <!-- Kubernetes -->
+        <div class="px-6 py-3.5 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm hover:border-cyan-400/60 hover:bg-slate-800/80 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3 text-slate-200 font-semibold text-base cursor-default">
+          <span class="text-xl">☸️</span>
+          <span>Kubernetes</span>
+        </div>
+
+        <!-- PostgreSQL -->
+        <div class="px-6 py-3.5 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm hover:border-cyan-400/60 hover:bg-slate-800/80 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3 text-slate-200 font-semibold text-base cursor-default">
+          <span class="text-xl">🐘</span>
+          <span>PostgreSQL</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 sm:py-28 relative border-t border-slate-800/80 bg-slate-900/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-cyan-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+          Client Voices
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mt-4">
+          Trusted by Industry Leaders
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          See what engineering executives and company founders say about building with NexaTech.
+        </p>
+      </div>
+
+      <!-- Testimonials Grid (3 Cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-8 backdrop-blur-sm hover:border-cyan-500/50 hover:bg-slate-900/80 hover:shadow-[0_0_25px_rgba(6,182,212,0.12)] transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <!-- Star Ratings -->
+            <div class="flex items-center gap-1 text-amber-400 text-base mb-5">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <!-- Review Quote -->
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed italic">
+              "NexaTech transformed our entire data pipeline with their AI models. Our query latency dropped by 70%, and their team felt like an extension of our own core engineering staff."
+            </p>
+          </div>
+          <!-- Author Info with Real Unsplash Avatar -->
+          <div class="flex items-center gap-4 pt-6 mt-6 border-t border-slate-800/60">
+            <img 
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80" 
+              alt="Alex Rivera, Chief Technology Officer at CloudScale Inc." 
+              class="w-12 h-12 rounded-full object-cover border-2 border-cyan-500/40"
+            />
+            <div>
+              <div class="text-sm font-bold text-white">Alex Rivera</div>
+              <div class="text-xs text-cyan-400 font-medium">CTO, CloudScale Inc.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-8 backdrop-blur-sm hover:border-cyan-500/50 hover:bg-slate-900/80 hover:shadow-[0_0_25px_rgba(6,182,212,0.12)] transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <!-- Star Ratings -->
+            <div class="flex items-center gap-1 text-amber-400 text-base mb-5">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <!-- Review Quote -->
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed italic">
+              "The cybersecurity and cloud infrastructure NexaTech deployed gave our enterprise clients total peace of mind. Truly world-class engineering execution from day one."
+            </p>
+          </div>
+          <!-- Author Info with Real Unsplash Avatar -->
+          <div class="flex items-center gap-4 pt-6 mt-6 border-t border-slate-800/60">
+            <img 
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80" 
+              alt="Marcus Vance, Co-Founder & CEO at Synthetix AI" 
+              class="w-12 h-12 rounded-full object-cover border-2 border-cyan-500/40"
+            />
+            <div>
+              <div class="text-sm font-bold text-white">Marcus Vance</div>
+              <div class="text-xs text-cyan-400 font-medium">Co-Founder & CEO, Synthetix AI</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-8 backdrop-blur-sm hover:border-cyan-500/50 hover:bg-slate-900/80 hover:shadow-[0_0_25px_rgba(6,182,212,0.12)] transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <!-- Star Ratings -->
+            <div class="flex items-center gap-1 text-amber-400 text-base mb-5">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <!-- Review Quote -->
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed italic">
+              "From mobile apps to distributed backend systems, NexaTech consistently delivers on time with unmatched code quality. They are our go-to partner for mission-critical software."
+            </p>
+          </div>
+          <!-- Author Info with Real Unsplash Avatar -->
+          <div class="flex items-center gap-4 pt-6 mt-6 border-t border-slate-800/60">
+            <img 
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80" 
+              alt="Elena Rostova, VP of Engineering at FinPulse Global" 
+              class="w-12 h-12 rounded-full object-cover border-2 border-cyan-500/40"
+            />
+            <div>
+              <div class="text-sm font-bold text-white">Elena Rostova</div>
+              <div class="text-xs text-cyan-400 font-medium">VP of Engineering, FinPulse Global</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="py-16 sm:py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Gradient Banner Container -->
+      <div class="relative overflow-hidden rounded-3xl border border-cyan-500/30 bg-gradient-to-r from-slate-950 via-slate-900 to-indigo-950 p-10 sm:p-16 lg:p-20 text-center shadow-[0_0_60px_rgba(6,182,212,0.15)]">
+        
+        <!-- Decorative Ambient Light Orbs -->
+        <div class="absolute -top-24 left-1/4 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 right-1/4 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/40 text-cyan-300 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+            Let's Collaborate
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+            Ready to build something great?
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            Whether you are launching an AI breakthrough, modernizing legacy infrastructure, or scaling to millions of concurrent users, NexaTech is ready to engineer your solution.
+          </p>
+
+          <div class="pt-4">
+            <a href="#contact" class="inline-flex items-center justify-center px-9 py-4 rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 hover:from-cyan-300 hover:to-indigo-400 text-slate-950 font-bold text-base shadow-xl shadow-cyan-400/25 hover:shadow-cyan-400/40 hover:-translate-y-0.5 transition-all duration-200">
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section (Integrated for UX and Form Functionality) -->
+  <section id="contact" class="py-16 sm:py-24 relative border-t border-slate-800/80 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Contact Details -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-cyan-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+            Get In Touch
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Speak Directly with Our Engineering Team
+          </h2>
+          <p class="text-slate-400 text-base leading-relaxed">
+            Have a project in mind, need technical advisory, or want a full architectural audit? We respond within 24 hours.
+          </p>
+
+          <div class="space-y-4 pt-4">
+            <!-- Email -->
+            <div class="flex items-center gap-4 p-4 rounded-2xl border border-slate-800 bg-slate-900/50 backdrop-blur-sm">
+              <div class="w-12 h-12 rounded-xl bg-cyan-950/40 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-xl shrink-0">
+                ✉️
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Direct Email</div>
+                <a href="mailto:hello@nexatech.com" class="text-white hover:text-cyan-400 font-medium text-sm sm:text-base transition-colors">
+                  hello@nexatech.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="flex items-center gap-4 p-4 rounded-2xl border border-slate-800 bg-slate-900/50 backdrop-blur-sm">
+              <div class="w-12 h-12 rounded-xl bg-indigo-950/40 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-xl shrink-0">
+                📍
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Headquarters</div>
+                <div class="text-white font-medium text-sm sm:text-base">
+                  Tbilisi, Georgia
+                </div>
+              </div>
+            </div>
+
+            <!-- Operations Desk -->
+            <div class="flex items-center gap-4 p-4 rounded-2xl border border-slate-800 bg-slate-900/50 backdrop-blur-sm">
+              <div class="w-12 h-12 rounded-xl bg-teal-950/40 border border-teal-500/30 text-teal-400 flex items-center justify-center text-xl shrink-0">
+                ⚡
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Availability</div>
+                <div class="text-white font-medium text-sm sm:text-base">
+                  24/7 Global Response Desk
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form (Pure HTML5, No JS Required) -->
+        <div class="lg:col-span-7">
+          <form action="#contact" method="GET" class="rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-md p-8 sm:p-10 space-y-6 shadow-xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <!-- Full Name -->
+              <div>
+                <label for="fullName" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Full Name</label>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="fullName" 
+                  placeholder="Sarah Connor" 
+                  required 
+                  class="w-full px-4 py-3 rounded-xl border border-slate-800 bg-slate-950/80 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all text-sm"
+                />
+              </div>
+
+              <!-- Email Address -->
+              <div>
+                <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Work Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="sarah@enterprise.com" 
+                  required 
+                  class="w-full px-4 py-3 rounded-xl border border-slate-800 bg-slate-950/80 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all text-sm"
+                />
+              </div>
+
+            </div>
+
+            <!-- Service Selection -->
+            <div>
+              <label for="serviceType" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Service of Interest</label>
+              <select 
+                id="serviceType" 
+                name="serviceType" 
+                class="w-full px-4 py-3 rounded-xl border border-slate-800 bg-slate-950/80 text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all text-sm"
+              >
+                <option value="ai">🤖 AI & Machine Learning</option>
+                <option value="cloud">☁️ Cloud Infrastructure</option>
+                <option value="security">🔒 Cybersecurity</option>
+                <option value="mobile">📱 Mobile App Development</option>
+                <option value="web">🌐 Web Development</option>
+                <option value="data">📊 Data Analytics</option>
+              </select>
+            </div>
+
+            <!-- Message Area -->
+            <div>
+              <label for="message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Project Overview</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="4" 
+                placeholder="Tell us about your project requirements, timeline, and goals..." 
+                required 
+                class="w-full px-4 py-3 rounded-xl border border-slate-800 bg-slate-950/80 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all text-sm"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button 
+              type="submit" 
+              class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-bold text-sm shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+            >
+              Send Message
+            </button>
+            <p class="text-xs text-center text-slate-500">We respect your privacy. No spam guaranteed.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 pt-16 pb-12 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+        
+        <!-- Brand & Description (Col 1 & 2) -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="#home" class="flex items-center gap-2 group">
+            <span class="text-2xl text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.7)]">⚡</span>
+            <span class="text-2xl font-black tracking-tight text-white group-hover:text-cyan-400 transition-colors">
+              Nexa<span class="text-cyan-400">Tech</span>
+            </span>
+          </a>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            Empowering high-growth enterprises with next-generation AI, cloud architectures, and resilient software systems.
+          </p>
+          <div class="text-xs text-slate-500 pt-2">
+            Engineered for performance, speed, and continuous uptime.
+          </div>
+        </div>
+
+        <!-- Links Column 1: Company -->
+        <div class="space-y-3">
+          <div class="text-xs font-bold text-white uppercase tracking-wider">Company</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#about" class="hover:text-cyan-400 transition-colors">About Us</a></li>
+            <li><a href="#services" class="hover:text-cyan-400 transition-colors">Services</a></li>
+            <li><a href="#technologies" class="hover:text-cyan-400 transition-colors">Technologies</a></li>
+            <li><a href="#testimonials" class="hover:text-cyan-400 transition-colors">Testimonials</a></li>
+            <li><a href="#contact" class="hover:text-cyan-400 transition-colors">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Services -->
+        <div class="space-y-3">
+          <div class="text-xs font-bold text-white uppercase tracking-wider">Services</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#services" class="hover:text-cyan-400 transition-colors">AI & Machine Learning</a></li>
+            <li><a href="#services" class="hover:text-cyan-400 transition-colors">Cloud Infrastructure</a></li>
+            <li><a href="#services" class="hover:text-cyan-400 transition-colors">Cybersecurity</a></li>
+            <li><a href="#services" class="hover:text-cyan-400 transition-colors">Mobile App Dev</a></li>
+            <li><a href="#services" class="hover:text-cyan-400 transition-colors">Web Development</a></li>
+            <li><a href="#services" class="hover:text-cyan-400 transition-colors">Data Analytics</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contact Details & Social Links -->
+        <div class="space-y-3">
+          <div class="text-xs font-bold text-white uppercase tracking-wider">Contact & Social</div>
+          <div class="text-sm space-y-1">
+            <div class="text-slate-300 font-medium">hello@nexatech.com</div>
+            <div class="text-slate-400">Tbilisi, Georgia</div>
+          </div>
+
+          <div class="pt-3">
+            <div class="text-xs font-semibold text-slate-400 mb-2">Connect with us:</div>
+            <div class="flex items-center gap-3">
+              <!-- GitHub -->
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-9 h-9 rounded-xl border border-slate-800 bg-slate-900/80 hover:border-cyan-400 hover:text-cyan-400 flex items-center justify-center text-xs font-bold text-slate-300 transition-all hover:-translate-y-0.5">
+                GH
+              </a>
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-xl border border-slate-800 bg-slate-900/80 hover:border-cyan-400 hover:text-cyan-400 flex items-center justify-center text-xs font-bold text-slate-300 transition-all hover:-translate-y-0.5">
+                IN
+              </a>
+              <!-- X (Twitter) -->
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="w-9 h-9 rounded-xl border border-slate-800 bg-slate-900/80 hover:border-cyan-400 hover:text-cyan-400 flex items-center justify-center text-xs font-bold text-slate-300 transition-all hover:-translate-y-0.5">
+                𝕏
+              </a>
+              <!-- Instagram -->
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl border border-slate-800 bg-slate-900/80 hover:border-cyan-400 hover:text-cyan-400 flex items-center justify-center text-xs font-bold text-slate-300 transition-all hover:-translate-y-0.5">
+                IG
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div>
+          © 2026 NexaTech. All rights reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#privacy" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+          <a href="#terms" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+          <a href="#security" class="hover:text-slate-400 transition-colors">Security</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
